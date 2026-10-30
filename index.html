@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Data Histogram (Filtering)</title>
+  
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/visualisations.css">
+
+</head>
+<body>
+  
+  <header>
+    <h1>TV Energy Consumption</h1>
+  </header>
+  
+  <main>
+    <div>
+      <h2>Energy Consumption for different TV screen types and sizes</h2>
+      <p>Most TVs on sale in Australia are LED and they vary considerably in energy consumption.</p>
+      
+      <!-- container for filters buttons -->
+      <div id="filters_screen"></div>
+      
+      <!-- container for charts -->
+      <div id="responsive-svg-container">
+        <!-- container for histogram -->
+        <div id="histogram" class="responsive-svg-container"></div>
+        <!-- container for filters buttons -->
+        <div id="filters_screen"></div>
+        <div id="filters_size"></div>
+      </div>
+      
+      <div class="body">
+        <p>Only TVs with energy consumption less than 1,800 kWh/per year have been included.</p>
+        <p><strong>Data source</strong><br>
+          <a href="https://data.gov.au/dataset/ds-dga-519280b5-4b8c-449e-b872-9c1682855fbc/details?q=">
+            Energy Rating Data for household appliances — Televisions
+          </a>
+          <br>Downloaded Jan 2025
+        </p>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Data Visualisation Week 6</p>
+  </footer>
+  
+  <!-- d3 library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  
+  <!-- visualization specific js files (with correct 'js/' folder path) -->
+  <script src="js/shared-constants.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/histogram.js"></script>
+  <script src="js/load-data.js"></script>
+  
+</body>
+</html>
